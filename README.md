@@ -1,0 +1,17 @@
+# Webdriver.IO Boilerplate
+
+## Features
+1. Cross browser testing
+2. Parallel testing
+3. Reporting (Allure)
+4. Continuous integration (Jenkins)
+5. Page object design patterns
+6. Screenplay design patterns
+
+
+## Challenges
+1. cross-origin frame
+
+## Enhancements
+1. Run in headless mode
+
