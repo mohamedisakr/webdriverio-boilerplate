@@ -135,6 +135,7 @@ exports.config = {
   mochaOpts: {
     ui: "bdd",
     timeout: 60000,
+    require: ["@babel/register"], //, "./test/helpers/common.js"
   },
   //
   // =====
@@ -178,8 +179,13 @@ exports.config = {
    * @param {Array.<String>} specs        List of spec file paths that are to be run
    * @param {Object}         browser      instance of created browser/device session
    */
+
+  // by me
+  // to solve babel error
   // before: function (capabilities, specs) {
+  //   require("babel-register");
   // },
+
   /**
    * Runs before a WebdriverIO command gets executed.
    * @param {String} commandName hook command name
