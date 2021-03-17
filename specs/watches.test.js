@@ -1,17 +1,15 @@
 import { expect as chaiExpect } from "chai";
+import watchesPage from "../pages/watches.page";
 
-describe.skip(`ebay categories - watches`, () => {
+describe(`ebay categories - watches`, () => {
   it(`verify banner container`, () => {
-    browser.url(`https://www.ebay.com/b/Wristwatches/31387/bn_2408451`);
-    const expectedText = `Time for a New Wristwatch?`;
-    const $bannerTitle = $(`.title-banner__title`);
-    expect($bannerTitle).toBeDisplayed();
+    watchesPage.open();
+    expect(watchesPage.$bannerTitle).toBeDisplayed();
   });
 
   it(`verify banner title`, () => {
     const expectedText = `Time for a New Wristwatch?`;
-    const $bannerTitle = $(`.title-banner__title`);
-    expect($bannerTitle).toHaveTextContaining(expectedText);
+    expect(watchesPage.$bannerTitle).toHaveTextContaining(expectedText);
   });
 
   it(`verify title`, () => {
