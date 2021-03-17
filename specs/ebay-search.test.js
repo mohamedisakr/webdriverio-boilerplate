@@ -1,4 +1,4 @@
-describe(`ebay search`, () => {
+describe.skip(`ebay search`, () => {
   it(`verify title`, () => {
     browser.url(`https://www.ebay.com`);
     const searchKeyword = "laptop";

@@ -18,5 +18,9 @@
 
 ## Recommendations
 1. Put all string constants in a separate file (constants.js for example)
-2. Make utils folder for utilities functions
+2. Make utils folder for utilities functions (string to number for example)
+
+## Extensions
+1. ES6 Mocha Snippets
+
 
