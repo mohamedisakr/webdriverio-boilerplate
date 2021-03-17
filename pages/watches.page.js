@@ -26,6 +26,10 @@ class WatchesPage extends PageBase {
     return $(`.hl-cat-nav__sub-cat-col a[href*='watch']`);
   }
 
+  get $bannerTitle() {
+    return $(`.title-banner__title`);
+  }
+
   getBrandList() {
     return this.$$searchBarAccordion.map((span) => span.getText());
   }

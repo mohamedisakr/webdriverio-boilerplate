@@ -1,13 +1,14 @@
 import { expect as chaiExpect } from "chai";
 import watchesPage from "../pages/watches.page";
-import { SearchBarAccordion, brands } from "../constants/accordion";
+import { SearchBarAccordion, brands } from "../resourses/accordion"; // "../re/accordion";
+import { watchesBannerTitle } from "../resourses/global-text";
+import { waitAndClick } from "../utilities/helper";
 
 describe(`ebay categories - watches`, () => {
   before(() => {
     watchesPage.open();
     watchesPage.$fashoinMenuLink.moveTo();
-    watchesPage.$watchSubMenuLink.waitForClickable();
-    watchesPage.$watchSubMenuLink.click();
+    waitAndClick(watchesPage.$watchSubMenuLink);
   });
 
   it(`verify banner container`, () => {
@@ -15,8 +16,7 @@ describe(`ebay categories - watches`, () => {
   });
 
   it(`verify banner title`, () => {
-    const expectedText = `Time for a New Wristwatch?`;
-    expect(watchesPage.$bannerTitle).toHaveTextContaining(expectedText);
+    expect(watchesPage.$bannerTitle).toHaveTextContaining(watchesBannerTitle);
   });
 
   it(`verify title`, () => {
@@ -24,8 +24,6 @@ describe(`ebay categories - watches`, () => {
   });
 
   it(`list all brands`, () => {
-    // console.log(`List all brands`);
-    // console.log(watchesPage.getBrandList());
     chaiExpect(watchesPage.getBrandList()).to.deep.equal(brands);
   });
 });
