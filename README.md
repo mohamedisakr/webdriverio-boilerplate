@@ -8,10 +8,6 @@
 5. Page object design patterns
 6. Screenplay design patterns
 
-
-## Challenges
-1. cross-origin frame
-
 ## Enhancements
 1. Migrate from Sync to Async Mode
 2. Run in headless mode
@@ -22,5 +18,14 @@
 
 ## Extensions
 1. ES6 Mocha Snippets
+
+## Best Practices
+1. Use chai globally (wdio.config.js) 
+    Note you can use it per test file ```import {expect as chaiExpect} from 'chai'```
+
+## Challenges
+1. cross-origin frame
+
+
 
 
