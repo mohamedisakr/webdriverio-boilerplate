@@ -5,6 +5,9 @@ import { SearchBarAccordion, brands } from "../constants/accordion";
 describe(`ebay categories - watches`, () => {
   before(() => {
     watchesPage.open();
+    watchesPage.$fashoinMenuLink.moveTo();
+    watchesPage.$watchSubMenuLink.waitForClickable();
+    watchesPage.$watchSubMenuLink.click();
   });
 
   it(`verify banner container`, () => {

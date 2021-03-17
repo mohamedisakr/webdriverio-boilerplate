@@ -13,6 +13,9 @@ describe(`ebay search`, () => {
 
   it(`verify dropdown have certian text for the selected option`, () => {
     const expectedText = `PC Laptops & Netbooks`;
+    searchPage.$category.waitUntil(() => {
+      return searchPage.$category.getText() === expectedText;
+    });
     expect(searchPage.$category).toHaveText(expectedText);
   });
 
