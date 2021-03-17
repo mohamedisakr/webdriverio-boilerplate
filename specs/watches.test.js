@@ -1,8 +1,9 @@
 import { expect as chaiExpect } from "chai";
 import watchesPage from "../pages/watches.page";
+import { SearchBarAccordion, brands } from "../constants/accordion";
 
 describe(`ebay categories - watches`, () => {
-  beforeEach(() => {
+  before(() => {
     watchesPage.open();
   });
 
@@ -17,5 +18,11 @@ describe(`ebay categories - watches`, () => {
 
   it(`verify title`, () => {
     chaiExpect(browser.getUrl()).to.include(`/Wristwatches/`);
+  });
+
+  it(`list all brands`, () => {
+    // console.log(`List all brands`);
+    // console.log(watchesPage.getBrandList());
+    chaiExpect(watchesPage.getBrandList()).to.deep.equal(brands);
   });
 });
