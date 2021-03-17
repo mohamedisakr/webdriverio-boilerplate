@@ -13,5 +13,10 @@
 1. cross-origin frame
 
 ## Enhancements
-1. Run in headless mode
+1. Migrate from Sync to Async Mode
+2. Run in headless mode
+
+## Recommendations
+1. Put all string constants in a separate file (constants.js for example)
+2. Make utils folder for utilities functions
 

@@ -1,3 +1,4 @@
+/*
 describe("Canary tests", () => {
   it("should have the right title", async () => {
     await browser.url(browser.config.baseUrl);
@@ -6,3 +7,4 @@ describe("Canary tests", () => {
     expect(title).toBe(expected);
   });
 });
+*/
