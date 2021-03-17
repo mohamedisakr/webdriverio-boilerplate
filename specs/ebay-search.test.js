@@ -1,10 +1,11 @@
 import searchPage from "../pages/search.page";
+import { waitForTextChange } from "../utilities/helper";
 
 describe(`ebay search`, () => {
   it(`verify title`, () => {
     searchPage.open();
-    const searchKeyword = "laptop";
 
+    const searchKeyword = "laptop";
     searchPage.$searchBox.setValue(searchKeyword);
     searchPage.$searchButton.click();
 
@@ -13,14 +14,12 @@ describe(`ebay search`, () => {
 
   it(`verify dropdown have certian text for the selected option`, () => {
     const expectedText = `PC Laptops & Netbooks`;
-    searchPage.$category.waitUntil(() => {
-      return searchPage.$category.getText() === expectedText;
-    });
+    waitForTextChange(searchPage.$category, expectedText);
     expect(searchPage.$category).toHaveText(expectedText);
   });
 
   it.skip(`(async) verify title with Page Object Model`, async () => {
-    await searchPage.open();
+    searchPage.open();
     const searchKeyword = "laptop";
 
     await searchPage.$searchBox.setValue(searchKeyword);

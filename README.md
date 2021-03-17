@@ -18,6 +18,7 @@
 
 1. Put all string constants in a separate file (constants.js for example)
 2. Make utils folder for utilities functions (string to number for example)
+3. Create resources files
 
 ## Extensions
 
