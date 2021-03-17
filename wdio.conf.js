@@ -181,7 +181,7 @@ exports.config = {
    */
 
   // by me
-  // to solve babel error
+  // to solve babel error -->> does not work
   // before: function (capabilities, specs) {
   //   require("babel-register");
   // },
@@ -202,8 +202,9 @@ exports.config = {
   /**
    * Function to be executed before a test (in Mocha/Jasmine) starts.
    */
-  // beforeTest: function (test, context) {
-  // },
+  beforeTest: function (test, context) {
+    browser.maximizeWindow();
+  },
   /**
    * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
    * beforeEach in Mocha)

@@ -2,8 +2,11 @@ import { expect as chaiExpect } from "chai";
 import watchesPage from "../pages/watches.page";
 
 describe(`ebay categories - watches`, () => {
-  it(`verify banner container`, () => {
+  beforeEach(() => {
     watchesPage.open();
+  });
+
+  it(`verify banner container`, () => {
     expect(watchesPage.$bannerTitle).toBeDisplayed();
   });
 
