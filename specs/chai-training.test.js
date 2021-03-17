@@ -1,6 +1,6 @@
 import { expect as chaiExpect } from "chai";
 
-describe(`ebay categories - watches`, () => {
+describe.skip(`ebay categories - watches`, () => {
   it(`verify banner container`, () => {
     browser.url(`https://www.ebay.com/b/Wristwatches/31387/bn_2408451`);
     const expectedText = `Time for a New Wristwatch?`;

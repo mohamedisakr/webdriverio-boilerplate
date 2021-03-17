@@ -1,30 +1,37 @@
-describe.skip(`ebay search`, () => {
+import searchPage from "../pages/search.page";
+
+describe(`ebay search`, () => {
   it(`verify title`, () => {
-    browser.url(`https://www.ebay.com`);
+    searchPage.open();
     const searchKeyword = "laptop";
-    const $searchBox = $(`#gh-ac`);
-    $searchBox.setValue(searchKeyword);
-    const $searchButton = $(`#gh-btn`);
-    $searchButton.click();
-    // const expectedTitle = `laptop | eBay`;
-    // expect(browser).toHaveTitle(expectedTitle);
+
+    searchPage.$searchBox.setValue(searchKeyword);
+    searchPage.$searchButton.click();
+
     expect(browser).toHaveTitleContaining(searchKeyword);
   });
 
   it(`verify dropdown have certian text for the selected option`, () => {
-    // browser.url(`https://www.ebay.com`);
-
-    // const searchKeyword = "laptop";
-    // const $searchBox = $(`#gh-ac`);
-
-    // $searchBox.setValue(searchKeyword);
-    // const $searchButton = $(`#gh-btn`);
-    // $searchButton.click();
-
-    const $firstOption = $(`#gh-cat option:nth-child(1)`);
     const expectedText = `PC Laptops & Netbooks`;
+    expect(searchPage.$category).toHaveText(expectedText);
+  });
 
-    expect($firstOption).toHaveText(expectedText);
+  it.skip(`(async) verify title with Page Object Model`, async () => {
+    await searchPage.open();
+    const searchKeyword = "laptop";
+
+    await searchPage.$searchBox.setValue(searchKeyword);
+    await searchPage.$searchButton.click();
+
+    expect(browser).toHaveTitleContaining(searchKeyword);
+
+    // await browser.url(`https://www.ebay.com`);
+    // const searchKeyword = "laptop";
+    // const $searchBox = await $(`#gh-ac`);
+    // await $searchBox.setValue(searchKeyword);
+    // const $searchButton = await $(`#gh-btn`);
+    // await $searchButton.click();
+    // expect(browser).toHaveTitleContaining(searchKeyword);
   });
 
   it.skip(`(async) verify title`, async () => {
