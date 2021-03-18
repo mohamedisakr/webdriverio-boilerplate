@@ -65,7 +65,7 @@ exports.config = {
   // Define all options that are relevant for the WebdriverIO instance here
   //
   // Level of logging verbosity: trace | debug | info | warn | error | silent
-  logLevel: "info",
+  logLevel: "warn",
   //
   // Set specific log levels per logger
   // loggers:
@@ -202,8 +202,10 @@ exports.config = {
   /**
    * Function to be executed before a test (in Mocha/Jasmine) starts.
    */
+
+  // by me
   beforeTest: function (test, context) {
-    browser.maximizeWindow();
+    // browser.maximizeWindow();
   },
   /**
    * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
