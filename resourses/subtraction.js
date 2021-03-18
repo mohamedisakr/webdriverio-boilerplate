@@ -1,26 +1,10 @@
-/*
-https://mozilla.github.io/calculator/test/?grep=Unit%20Tests%20Subtraction
-
-let scenario = document.querySelectorAll(`.test.pass`)
-let testCaseList = [];
-scenario.forEach(node=> {
-    let h2 = node.querySelector(`h2`)
-    let description = h2.textContent
-    let values = [...node.querySelectorAll(`.comment .number`)].slice(0, 3)
-    // values.forEach(val=>console.log(val.textContent))
-    let [number1, number2, expectedResult] = values.map(val=>(val.textContent))
-    let testCase = {description, operation:'-', number1, number2, expectedResult}
-    testCaseList.push(testCase)
-})
-console.log(testCaseList)
-*/
-const testcases = [
+export const testCases = [
   {
     description: "Should be able to subtract two positive integers",
     operation: "-",
     number1: "1500",
     number2: "2000",
-    expectedResult: "500",
+    expectedResult: "-500",
   },
   {
     description: "Should be able to subtract zero from a negative integer",
@@ -147,3 +131,4 @@ const testcases = [
     expectedResult: "4.91246913",
   },
 ];
+// export { testCases };

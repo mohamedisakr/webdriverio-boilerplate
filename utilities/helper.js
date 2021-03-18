@@ -17,4 +17,9 @@ const waitAndSetValue = (element, val, timeout = 3000) => {
   element.setValue(val);
 };
 
-export { waitForTextChange, waitAndClick, waitAndSetValue };
+const waitAndGetValue = (element, timeout = 3000) => {
+  // element.waitForDisplayed({ timeout });
+  return element.getValue();
+};
+
+export { waitForTextChange, waitAndClick, waitAndSetValue, waitAndGetValue };
