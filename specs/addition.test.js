@@ -14,20 +14,20 @@ describe(`Addition Scenario`, () => {
     calculatorPage.setOperationToAddition();
   });
 
-  // testCases.forEach((testCase) => {
-  //   let { description, operation, number1, number2, expectedResult } = testCase;
-  //   it(`${description}`, () => {
-  //     waitAndSetValue(calculatorPage.$number1, number1);
-  //     waitAndSetValue(calculatorPage.$number2, number2);
-  //     waitAndClick(calculatorPage.$calculateButton);
+  testCases.forEach((testCase) => {
+    let { description, operation, number1, number2, expectedResult } = testCase;
+    it(`${description}`, () => {
+      waitAndSetValue(calculatorPage.$number1, number1);
+      waitAndSetValue(calculatorPage.$number2, number2);
+      waitAndClick(calculatorPage.$calculateButton);
 
-  //     let actualResult = waitAndGetValue(calculatorPage.$numberAnswer);
-  //     chaiExpect(actualResult).to.equal(expectedResult);
-  //     browser.pause(1000);
-  //   });
-  // });
+      let actualResult = waitAndGetValue(calculatorPage.$numberAnswer);
+      chaiExpect(actualResult).to.equal(expectedResult);
+      browser.pause(1000);
+    });
+  });
 
-  it.skip("clear button should clear answer field", () => {
+  it("clear button should clear answer field", () => {
     let number1 = "12";
     let number2 = "3";
     let actualResult = "15";

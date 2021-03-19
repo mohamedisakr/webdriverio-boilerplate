@@ -14,7 +14,7 @@ describe(`Subtraction Scenario`, () => {
     calculatorPage.setOperationToSubtract();
   });
 
-  /*
+  // /*
   testCases.forEach((testCase) => {
     let { description, operation, number1, number2, expectedResult } = testCase;
     it(`${description}`, () => {
