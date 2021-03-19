@@ -29,6 +29,10 @@ class Calculator {
     this.$operation.selectByAttribute("value", "4");
   }
 
+  setOperationToMultiplication() {
+    this.$operation.selectByAttribute("value", "2");
+  }
+
   open() {
     browser.url(`https://testsheepnz.github.io/BasicCalculator.html`);
   }
