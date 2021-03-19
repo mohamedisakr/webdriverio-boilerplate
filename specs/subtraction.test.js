@@ -14,7 +14,7 @@ describe(`Subtraction Scenario`, () => {
     calculatorPage.setOperationToSubtract();
   });
 
-  // /*
+  /*
   testCases.forEach((testCase) => {
     let { description, operation, number1, number2, expectedResult } = testCase;
     it(`${description}`, () => {
@@ -29,6 +29,22 @@ describe(`Subtraction Scenario`, () => {
     });
   });
   // */
+
+  it("Integers only checkbox should remove the decimal places", () => {
+    let number1 = "10.25";
+    let number2 = "5.50";
+    let actualResult = "4.75";
+    waitAndSetValue(calculatorPage.$number1, number1);
+    waitAndSetValue(calculatorPage.$number2, number2);
+    waitAndClick(calculatorPage.$calculateButton);
+    const oldResult = waitAndGetValue(calculatorPage.$numberAnswer);
+    chaiExpect(actualResult).to.equal(oldResult);
+
+    waitAndClick(calculatorPage.$integerOnlyCheckbox);
+    // const trimmed = waitAndGetValue(calculatorPage.$numberAnswer);
+    let newResult = waitAndGetValue(calculatorPage.$numberAnswer);
+    chaiExpect(parseInt(newResult)).to.equal(parseInt(actualResult));
+  });
 });
 
 //=======================

@@ -15,10 +15,18 @@ class Calculator {
     return $(`#calculateButton`);
   }
   get $numberAnswer() {
-    return $(`#numberAnswerField`); // numberAnswerField
+    return $(`#numberAnswerField`);
   }
   get $clearButton() {
     return $(`#clearButton`);
+  }
+
+  get $errorMessage() {
+    return $(`#errorMsgField`);
+  }
+
+  get $integerOnlyCheckbox() {
+    return $(`#integerSelect`);
   }
 
   setOperationToSubtract() {

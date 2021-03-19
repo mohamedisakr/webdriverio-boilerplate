@@ -68,11 +68,11 @@ export const testCases = [
     number2: "2.10987654",
     expectedResult: "0.5851375028796708",
   },
-  //   {
-  //     description: "Should report error for division by 0",
-  //     operation: "/", // 1500 / 0 = Error
-  //     number1: "1500",
-  //     number2: "0",
-  //     expectedResult: "6",
-  //   },
+  {
+    description: "Should report error for division by 0",
+    operation: "/", // 1500 / 0 = Error
+    number1: "1500",
+    number2: "0",
+    expectedResult: "6",
+  },
 ];
