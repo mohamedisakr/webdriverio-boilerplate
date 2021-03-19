@@ -23,19 +23,11 @@ export const testCases = [
   {
     description:
       "Should be able to subtract a floating point number from a negative integer",
-    operation: "-",
+    operation: "-", // -1 - 2.25 = -3.25
     number1: "-1",
     number2: "2.25",
     expectedResult: "-3.25",
   },
-  //   {
-  //     description:
-  //       "Should be able to subtract an integer from the results of a previous operation",
-  //     operation: "-",
-  //     number1: "1500",
-  //     number2: "2000",
-  //     expectedResult: "500",
-  //   },
   {
     description:
       "Should be able to subtract an integer from a floating point number",
@@ -67,46 +59,7 @@ export const testCases = [
     number2: "2.2109876",
     expectedResult: "4.9124691",
   },
-  {
-    description:
-      "An addition of a negative floating point addend, to an integer addend should be treated as a subtraction of a positive integer subtrahend",
-    operation: "+", // 1000 + -10.99 = 989.01
-    number1: "1000",
-    number2: "-10.99",
-    expectedResult: "989.01",
-  },
-  {
-    description:
-      "An addition of a negative floating point addend should be treated as a subtraction of a positive floating point subtrahend",
-    operation: "+", // -1.0 + -989.99
-    number1: "-1.0",
-    number2: "-989.99",
-    expectedResult: "-990.99",
-  },
-  {
-    description:
-      "An addition of a negative integer addend should be treated as a subtraction of a poisitive integer subtrahend",
-    operation: "+", // // 50 + - 60 = -10
-    number1: "50",
-    number2: "-60",
-    expectedResult: "-10",
-  },
-  {
-    description:
-      "An addition of a negative integer addend to another negative integer addend should be treated as a subtraction of a poisitive integer subtrahend",
-    operation: "+", // // -5 + - 20 = -25
-    number1: "-5",
-    number2: "-20",
-    expectedResult: "-25",
-  },
-  //   {
-  //     description:
-  //       "Should be able to subtract a floating point number from the result of a previous operation",
-  //     operation: "-",
-  //     number1: "1500",
-  //     number2: "2000",
-  //     expectedResult: "500",
-  //   },
+
   {
     description:
       "Should be able to subtract an integer from a negative floating point number",
@@ -130,5 +83,37 @@ export const testCases = [
     number2: "2.21098765",
     expectedResult: "4.91246913",
   },
+  // {
+  //   description:
+  //     "An addition of a negative floating point addend, to an integer addend should be treated as a subtraction of a positive integer subtrahend",
+  //   operation: "+", // 1000 + -10.99 = 989.01
+  //   number1: "1000",
+  //   number2: "-10.99",
+  //   expectedResult: "989.01",
+  // },
+  // {
+  //   description:
+  //     "An addition of a negative floating point addend should be treated as a subtraction of a positive floating point subtrahend",
+  //   operation: "+", // -1.0 + -989.99
+  //   number1: "-1.0",
+  //   number2: "-989.99",
+  //   expectedResult: "-990.99",
+  // },
+  // {
+  //   description:
+  //     "An addition of a negative integer addend should be treated as a subtraction of a poisitive integer subtrahend",
+  //   operation: "+", // // 50 + - 60 = -10
+  //   number1: "50",
+  //   number2: "-60",
+  //   expectedResult: "-10",
+  // },
+  // {
+  //   description:
+  //     "An addition of a negative integer addend to another negative integer addend should be treated as a subtraction of a poisitive integer subtrahend",
+  //   operation: "+", // // -5 + - 20 = -25
+  //   number1: "-5",
+  //   number2: "-20",
+  //   expectedResult: "-25",
+  // },
 ];
 // export { testCases };

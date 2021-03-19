@@ -14,6 +14,7 @@ describe(`Subtraction Scenario`, () => {
     calculatorPage.setOperationToSubtract();
   });
 
+  // /*
   testCases.forEach((testCase) => {
     let { description, operation, number1, number2, expectedResult } = testCase;
     it(`${description}`, () => {
@@ -22,13 +23,40 @@ describe(`Subtraction Scenario`, () => {
 
       waitAndClick(calculatorPage.$calculateButton);
       let actualResult = waitAndGetValue(calculatorPage.$numberAnswer);
-      console.log(`expect: ${expectedResult}`);
-      console.log(`actual: ${actualResult}`);
-      // browser.pause(5000);
+
       chaiExpect(actualResult).to.equal(expectedResult);
+      browser.pause(1000);
     });
   });
+  // */
 });
+
+//=======================
+
+// console.log(`expect: ${expectedResult}`);
+// console.log(`actual: ${actualResult}`);
+
+//=======================
+/*
+  it(`${testCases[2].description}`, () => {
+    let {
+      description,
+      operation,
+      number1,
+      number2,
+      expectedResult,
+    } = testCases[2];
+    waitAndSetValue(calculatorPage.$number1, number1);
+    waitAndSetValue(calculatorPage.$number2, number2);
+
+    waitAndClick(calculatorPage.$calculateButton);
+    let actualResult = waitAndGetValue(calculatorPage.$numberAnswer);
+    // console.log(`expect: ${expectedResult}`);
+    // console.log(`actual: ${actualResult}`);
+    chaiExpect(actualResult).to.equal(expectedResult);
+    browser.pause(5000);
+  });
+  */
 
 // =======================
 /*
