@@ -1,17 +1,17 @@
 import { expect as chaiExpect } from "chai";
 import calculatorPage from "../pages/calculator.page";
-import { testCases } from "../resourses/addition";
+import { testCases } from "../resourses/division";
 import {
   waitAndClick,
   waitAndSetValue,
   waitAndGetValue,
 } from "../utilities/helper";
 
-describe(`Addition Scenario`, () => {
+describe(`Division Scenario`, () => {
   before(() => {
     calculatorPage.open();
     calculatorPage.show();
-    calculatorPage.setOperationToAddition();
+    calculatorPage.setOperationToDivision();
   });
 
   testCases.forEach((testCase) => {
@@ -22,7 +22,10 @@ describe(`Addition Scenario`, () => {
       waitAndClick(calculatorPage.$calculateButton);
 
       let actualResult = waitAndGetValue(calculatorPage.$numberAnswer);
-      chaiExpect(actualResult).to.equal(expectedResult);
+      chaiExpect(parseFloat(actualResult).toFixed(8)).to.equal(
+        parseFloat(expectedResult).toFixed(8)
+      );
+
       browser.pause(1000);
     });
   });

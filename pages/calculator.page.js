@@ -33,6 +33,14 @@ class Calculator {
     this.$operation.selectByAttribute("value", "2");
   }
 
+  setOperationToDivision() {
+    this.$operation.selectByAttribute("value", "3");
+  }
+
+  setOperationToConcatenation() {
+    this.$operation.selectByAttribute("value", "0");
+  }
+
   open() {
     browser.url(`https://testsheepnz.github.io/BasicCalculator.html`);
   }

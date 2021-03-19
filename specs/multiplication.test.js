@@ -23,7 +23,9 @@ describe(`Multiplication Scenario`, () => {
       waitAndClick(calculatorPage.$calculateButton);
       let actualResult = waitAndGetValue(calculatorPage.$numberAnswer);
 
-      chaiExpect(actualResult).to.equal(expectedResult);
+      chaiExpect(parseFloat(actualResult).toFixed(8)).to.equal(
+        parseFloat(expectedResult).toFixed(8)
+      );
       browser.pause(1000);
     });
   });
