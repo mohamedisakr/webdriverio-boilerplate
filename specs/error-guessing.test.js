@@ -14,7 +14,7 @@ describe(`error guessing Scenario`, () => {
     calculatorPage.setOperationToMultiplication();
   });
 
-  it.skip(`${testCases[0].description}`, () => {
+  it(`${testCases[0].description}`, () => {
     let { number1, number2, expectedResult } = testCases[0];
     waitAndSetValue(calculatorPage.$number1, number1);
     waitAndSetValue(calculatorPage.$number2, number2);
@@ -23,7 +23,7 @@ describe(`error guessing Scenario`, () => {
     chaiExpect(actualResult).to.equal(expectedResult);
   });
 
-  it.skip(`${testCases[1].description}`, () => {
+  it(`${testCases[1].description}`, () => {
     let { number1, number2, expectedResult } = testCases[1];
     waitAndSetValue(calculatorPage.$number1, number1);
     waitAndSetValue(calculatorPage.$number2, number2);
@@ -31,7 +31,7 @@ describe(`error guessing Scenario`, () => {
     expect(calculatorPage.$errorMessage).toBeEnabled();
   });
 
-  it.skip(`${testCases[2].description}`, () => {
+  it(`${testCases[2].description}`, () => {
     let { number1, number2, expectedResult } = testCases[2];
     waitAndSetValue(calculatorPage.$number1, number1);
     waitAndSetValue(calculatorPage.$number2, number2);
@@ -40,7 +40,7 @@ describe(`error guessing Scenario`, () => {
     chaiExpect(actualResult).to.equal(expectedResult);
   });
 
-  it.skip(`${testCases[3].description}`, () => {
+  it(`${testCases[3].description}`, () => {
     let { number1, number2, expectedResult } = testCases[3];
     waitAndSetValue(calculatorPage.$number1, number1);
     waitAndSetValue(calculatorPage.$number2, number2);
@@ -48,7 +48,7 @@ describe(`error guessing Scenario`, () => {
     expect(calculatorPage.$errorMessage).toBeEnabled();
   });
 
-  it.skip(`${testCases[4].description}`, () => {
+  it(`${testCases[4].description}`, () => {
     let { number1, number2, expectedResult } = testCases[4];
     waitAndSetValue(calculatorPage.$number1, number1);
     waitAndSetValue(calculatorPage.$number2, number2);
@@ -57,7 +57,7 @@ describe(`error guessing Scenario`, () => {
     chaiExpect(actualResult).to.equal(expectedResult);
   });
 
-  it.skip(`${testCases[5].description}`, () => {
+  it(`${testCases[5].description}`, () => {
     let { number1, number2, expectedResult } = testCases[5];
     waitAndSetValue(calculatorPage.$number1, number1);
     waitAndSetValue(calculatorPage.$number2, number2);
@@ -65,7 +65,7 @@ describe(`error guessing Scenario`, () => {
     expect(calculatorPage.$errorMessage).toBeEnabled();
   });
 
-  it.skip(`${testCases[6].description}`, () => {
+  it(`${testCases[6].description}`, () => {
     let { number1, number2, expectedResult } = testCases[6];
     waitAndSetValue(calculatorPage.$number1, number1);
     waitAndSetValue(calculatorPage.$number2, number2);
@@ -73,7 +73,7 @@ describe(`error guessing Scenario`, () => {
     expect(calculatorPage.$errorMessage).toBeEnabled();
   });
 
-  it.skip(`${testCases[7].description}`, () => {
+  it(`${testCases[7].description}`, () => {
     let { number1, number2, expectedResult } = testCases[7];
     waitAndSetValue(calculatorPage.$number1, number1);
     waitAndSetValue(calculatorPage.$number2, number2);
@@ -82,7 +82,7 @@ describe(`error guessing Scenario`, () => {
     chaiExpect(actualResult).to.equal(expectedResult);
   });
 
-  it.skip(`${testCases[8].description}`, () => {
+  it(`${testCases[8].description}`, () => {
     let { number1, number2, expectedResult } = testCases[8];
     waitAndSetValue(calculatorPage.$number1, number1);
     waitAndSetValue(calculatorPage.$number2, number2);
