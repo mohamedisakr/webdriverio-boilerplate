@@ -23,7 +23,7 @@ describe(`ebay categories - watches`, () => {
     chaiExpect(browser.getUrl()).to.include(`/Wristwatches/`);
   });
 
-  it(`list all brands`, () => {
+  it.skip(`list all brands`, () => {
     chaiExpect(watchesPage.getBrandList()).to.deep.equal(brands);
   });
 });
