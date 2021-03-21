@@ -12,6 +12,20 @@ allure generate --clean allure-results && allure open
 java -jar selenium-server-standalone-3.141.59 -port 4545
 ```
 
+## To configure chai globally
+
+```
+beforeTest: function () {
+    const chai = require("chai");
+    const chaiWebdriver = require("chai-webdriverio").default;
+    chai.use(chaiWebdriver(browser));
+
+    global.assert = chai.assert;
+    global.should = chai.should;
+    global.expect = chai.expect;
+  },
+```
+
 ## Features
 
 1. Cross browser testing
