@@ -6,6 +6,12 @@
 allure generate --clean allure-results && allure open
 ```
 
+## To run selenium server standalone
+
+```
+java -jar selenium-server-standalone-3.141.59 -port 4545
+```
+
 ## Features
 
 1. Cross browser testing

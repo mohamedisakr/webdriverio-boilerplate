@@ -107,18 +107,18 @@ exports.config = {
   // commands. Instead, they hook themselves up into the test process.
 
   // by me
-  // services: ["chromedriver"],
+  services: ["chromedriver"],
   /**
    * simplified mode (available since v6.11.0)
    * set `true` to use the version provided by `selenium-standalone`, 'latest' by default
    */
 
-  services: [
-    [
-      "selenium-standalone",
-      { drivers: { firefox: "0.28.0", chrome: true, chromiumedge: "latest" } },
-    ],
-  ],
+  // services: [
+  //   [
+  //     "selenium-standalone",
+  //     { drivers: { firefox: "0.28.0", chrome: true, chromiumedge: "latest" } },
+  //   ],
+  // ],
 
   // Framework you want to run your specs with.
   // The following are supported: Mocha, Jasmine, and Cucumber
