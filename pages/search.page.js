@@ -1,4 +1,9 @@
 import PageBase from "./page.base";
+import {
+  searchBox,
+  searchButton,
+  category,
+} from "../selectors/search.selectors";
 
 class SearchPage extends PageBase {
   constructor() {
@@ -6,17 +11,15 @@ class SearchPage extends PageBase {
   }
 
   get $searchBox() {
-    return $(`#gh-ac`);
+    return $(searchBox);
   }
-  // $searchBox.setValue(searchKeyword);
+
   get $searchButton() {
-    return $(`#gh-btn`);
+    return $(searchButton);
   }
-  // $searchButton.click();
 
   get $category() {
-    //firstOption
-    return $(`#gh-cat option:nth-child(1)`);
+    return $(category);
   }
 }
 
