@@ -1,3 +1,4 @@
+import allureReporter from "@wdio/allure-reporter";
 import searchPage from "../pages/search.page";
 import {
   waitAndSetValue,
@@ -15,11 +16,13 @@ describe(`ebay search`, () => {
   });
 
   it(`verify dropdown have certian text for the selected option`, () => {
+    allureReporter.addFeature("Search category");
     waitForTextChange(searchPage.$category, mainTitle);
     expect(searchPage.$category).toHaveText(mainTitle);
   });
 
   it.skip(`(async) verify title with Page Object Model`, async () => {
+    allureReporter.addSeverity("Critical");
     searchPage.open();
     await searchPage.$searchBox.setValue(searchKeyword);
     await searchPage.$searchButton.click();

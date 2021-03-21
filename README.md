@@ -1,5 +1,11 @@
 # Webdriver.IO Boilerplate
 
+## To displaying the allure report
+
+```
+allure generate --clean allure-results && allure open
+```
+
 ## Features
 
 1. Cross browser testing
