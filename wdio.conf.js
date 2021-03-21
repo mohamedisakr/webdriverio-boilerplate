@@ -249,6 +249,15 @@ exports.config = {
    */
   // afterTest: function(test, context, { error, result, duration, passed, retries }) {
   // },
+  afterStep: function (
+    test,
+    context,
+    { error, result, duration, passed, retries }
+  ) {
+    if (error) {
+      browser.takeScreenshot();
+    }
+  },
 
   /**
    * Hook that gets executed after the suite has ended
